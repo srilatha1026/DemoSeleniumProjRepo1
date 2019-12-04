@@ -24,6 +24,7 @@ public class AutomationTalks_Asssignment2 {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		
+		
 		//Select the MAKE dropdown in the webpage and //Select an option from the dropdown
 		WebElement makeDD=driver.findElement(By.id("make"));
 		//WebElement makeDD = driver.findElement(By.xpath("//select[@id='make']"));
