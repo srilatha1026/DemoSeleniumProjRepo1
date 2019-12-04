@@ -29,6 +29,7 @@ public class MyFirstAssignment_Registration {
 		//click on Register button
 		driver.findElement(By.xpath("//a[@class='btn btn-warning btn-lg btn-block register-button']")).click();
 		
+		
 		//first find the webelement gender
 		
 		//click on Gender radio button as male

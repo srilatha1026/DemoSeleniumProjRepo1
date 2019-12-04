@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.Select;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import net.bytebuddy.utility.privilege.GetSystemPropertyAction;
 
-public class AutomationTalks_Asssignment2 {
+public class FileUploadRobotClass {
 
 	public static void main(String[] args) throws InterruptedException {
 		
@@ -54,13 +54,13 @@ public class AutomationTalks_Asssignment2 {
 		selectNoOfSeats.selectByValue("8");
 		
 		//Click RadioButton RightHAndDrive
-		String rightHandDriveButton ="No";
-		if(rightHandDriveButton.equals("Yes")) {
+		//String rightHandDriveButton ="Yes";
+		//if(rightHandDriveButton.equals("Yes")) {
 						
-		driver.findElement(By.xpath("//input[@id='righthanddriveyes']/parent::label")).click();
-		}else {
-			driver.findElement(By.xpath("//input[@id='righthanddriveno']/parent::label")).click();
-		}
+		//	driver.findElement(By.xpath("//input[@id='righthanddriveyes']")).click();
+		//}else {
+		//	driver.findElement(By.xpath("//input[@id='righthanddriveno']")).click();
+		//}
 		
 		//input PAyload
 		driver.findElement(By.id("payload")).sendKeys("234");
@@ -129,6 +129,11 @@ public class AutomationTalks_Asssignment2 {
 		driver.findElement(By.xpath("//input[@id=\"other\"]/following-sibling::span")).click();
 		
 		
+		//Upload Picture using sendkeys method
+		//driver.findElement(By.id("")).sendKeys(imagepath);
+		//Upload Picture using RobotClass
+		driver.findElement(By.id("open")).click();
+		
 		
 		// click next button
 		 driver.findElement(By.xpath("//button[@id='nextenterproductdata']")).click();
@@ -195,8 +200,7 @@ public class AutomationTalks_Asssignment2 {
 		    //We are now in Choose Price Option Table
 		    
 		      //Select Platinum Option
-				   // driver.findElement(By.xpath("//input[@id='selectplatinum']/following-sibling::span")).click();
-				    driver.findElement(By.xpath("//input[@id='selectgold']/following-sibling::span")).click();
+				    driver.findElement(By.xpath("//input[@id='selectplatinum']/following-sibling::span")).click();
 				    
 		    
 				 // click next button
