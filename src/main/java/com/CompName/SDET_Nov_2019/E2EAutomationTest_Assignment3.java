@@ -169,14 +169,13 @@ public class E2EAutomationTest_Assignment3 {
 			driver.findElement(By.xpath("//button[text()='Save']")).click();
 			Thread.sleep(5000);
 						
-		//Step 10: Step 10: Logout of application 
+	  //Step 10: Logout of application 
 			//click on admin at the top right corner
-			driver.findElement(By.xpath("//a[@href='#']")).click();
+			driver.findElement(By.xpath("//li[@class='dropdown user']/child::a")).click();
 			//click on log-off
-			driver.findElement(By.xpath("//a[@href='/demo/v9/index.php/login/logoff']")).click();
+//			driver.findElement(By.xpath("//a[@href='/demo/v9/index.php/login/logoff']")).click();
+			driver.findElement(By.xpath("//*[text()=' Logoff']//parent::a")).click();
 			
-//		 Thread.sleep(2000);
-//			
 	  //Step 11: Once logged out, verify the page title (using assertion, refer link provided in step4)	
 		 String actualtitleOfPage = driver.getTitle();
 		 String expectedtitleOfPage = "qdPM | Login";
@@ -206,20 +205,23 @@ public class E2EAutomationTest_Assignment3 {
 		 
 	//Step16: Verify the search result against those entered in step 7 and step 8
 		 //Label: Issue 
-		boolean islabelDisplayed = driver.findElement(By.xpath("//table//tr/td[text()='Issue']")).isDisplayed();
-		Assert.assertEquals(islabelDisplayed, true);
+//		boolean islabelDisplayed = driver.findElement(By.xpath("//table//tr/td[text()='Issue']")).isDisplayed();
+//		Assert.assertEquals(islabelDisplayed, true);
+		 String labelData = driver.findElement(By.xpath("//table/tbody/tr/td[4]")).getText();
+		 Assert.assertEquals(labelData, "Issue", "The names do not match");
 	
 		 //name
-//		 String expectedName = "Srilatha";
-//		 String actualName = "Srilatha";
-//		 Assert.assertEquals(actualName, expectedName);
-		 		
-		 boolean actualNameDisplayed = driver.findElement(By.xpath("//a[text()='Srilatha']")).isDisplayed();
-		 Assert.assertEquals(actualNameDisplayed, true);
+//		 boolean actualNameDisplayed = driver.findElement(By.xpath("//a[text()='Srilatha']")).isDisplayed();
+//		 Assert.assertEquals(actualNameDisplayed, true);
+		 String nameData = driver.findElement(By.xpath("//table/tbody/tr/td[5]")).getText();
+		 Assert.assertEquals(nameData, "Srilatha", "The names do not match");
+		 
 		 
 		 //Status: Lost
-		 boolean actualStatusDisplayed = driver.findElement(By.xpath("//td[text()='Lost']")).isDisplayed();
-		 Assert.assertEquals(actualStatusDisplayed, true);
+//		 boolean actualStatusDisplayed = driver.findElement(By.xpath("//td[text()='Lost']")).isDisplayed();
+//		 Assert.assertEquals(actualStatusDisplayed, true);
+		 String statusData = driver.findElement(By.xpath("//table/tbody/tr/td[6]")).getText();
+		 Assert.assertEquals(statusData, "Lost", "The names do not match");
 		 
 		 //assigned to
 		 boolean actualAssignedtoDisplayed = driver.findElement(By.xpath("//tr[@class='odd']/td[text()='Lost']/following-sibling::td")).isDisplayed();
