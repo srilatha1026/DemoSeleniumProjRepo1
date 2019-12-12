@@ -20,7 +20,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class E2EAutomationTest_Assignment3 {
 
-	public static void main(String[] args) throws AWTException, InterruptedException {
+	public static void main(String[] args) throws Exception {
 		
 		//setting the initial set ups for selenium to interact with the required browserdriver and launch the same
 		WebDriverManager.chromedriver().setup();
@@ -225,46 +225,50 @@ public class E2EAutomationTest_Assignment3 {
 		 
 		 //assigned to
 		 String assignedToData = driver.findElement(By.xpath("//table/tbody/tr/td[7]")).getText();
-		 System.out.println(assignedToData);
-		 System.out.println("developer\r\n" + "manager");
-		 Assert.assertEquals(assignedToData.toString(), "developer\r\n" + "manager", "The names do not match");
-		
+//		 System.out.println(assignedToData);
+//		 System.out.println("developer\r\n" + "manager");
+//		 Assert.assertEquals(assignedToData.toString(), "developer\r\n" + "manager", "The names do not match");
+		if(assignedToData.contains("developer") && assignedToData.contains("manager")) {
+			throw new Exception("Data in the assignedto matches");
+		}else {
+			System.out.println("The data is not a match");
+		}
 		 
 		 //Est time
 		 String estTimeData = driver.findElement(By.xpath("//table/tbody/tr/td[8]")).getText();
 		 Assert.assertEquals(estTimeData, "11", "The time do not match");
-//	//Step17:Clicking on delete button
-//		 driver.findElement(By.xpath("//tbody/tr[1]/td[2]/a[@class='btn btn-default btn-xs purple']")).click();
-//		 
-//	//Step18: confirmation in Alert. So switch to that alert and accept it.	 
-//		 Alert al =driver.switchTo().alert();
-//		 al.accept();
-//		 
-//	//Step19: Verify that user is deleted from system. 
-//		 WebElement searchField1 = driver.findElement(By.xpath("//div[@id='search_menu']"));
-//		 Actions movemouseonSearch1 = new Actions(driver);
-//		 movemouseonSearch1.moveToElement(searchField1).build().perform();
-//		 
-//		 WebElement searchText1 = driver.findElement(By.xpath("//td/input[@id='search_keywords']"));
-//		 searchText1.sendKeys("Srilatha");
-//		 
-//		 WebElement searchButton1 = driver.findElement(By.xpath("//td/input[@class='btn btn-default']"));
-//		 searchButton1.click();
-//		 
-//		 String actualTableContents = driver.findElement(By.xpath("//td[text()='No Records Found']")).getText();
-//		 String expectedTableContents = "No Records Found";
-//		 Assert.assertEquals(actualTableContents, expectedTableContents);
-//		 
-//	//Step20: Logout of application & close browser.
-//		 	//Logging off
-//		//click on admin at the top right corner
-//			driver.findElement(By.xpath("//a[@href='#']")).click();
-//		//click on log-off
-//			driver.findElement(By.xpath("//a[@href='/demo/v9/index.php/login/logoff']")).click();
-//			
-//		Thread.sleep(3000);
-//			//Close browser
-//			driver.quit();
+	//Step17:Clicking on delete button
+		 driver.findElement(By.xpath("//tbody/tr[1]/td[2]/a[@class='btn btn-default btn-xs purple']")).click();
+		 
+	//Step18: confirmation in Alert. So switch to that alert and accept it.	 
+		 Alert al =driver.switchTo().alert();
+		 al.accept();
+		 
+	//Step19: Verify that user is deleted from system. 
+		 WebElement searchField1 = driver.findElement(By.xpath("//div[@id='search_menu']"));
+		 Actions movemouseonSearch1 = new Actions(driver);
+		 movemouseonSearch1.moveToElement(searchField1).build().perform();
+		 
+		 WebElement searchText1 = driver.findElement(By.xpath("//td/input[@id='search_keywords']"));
+		 searchText1.sendKeys("Srilatha");
+		 
+		 WebElement searchButton1 = driver.findElement(By.xpath("//td/input[@class='btn btn-default']"));
+		 searchButton1.click();
+		 
+		 String actualTableContents = driver.findElement(By.xpath("//td[text()='No Records Found']")).getText();
+		 String expectedTableContents = "No Records Found";
+		 Assert.assertEquals(actualTableContents, expectedTableContents);
+		 
+	//Step20: Logout of application & close browser.
+		 	//Logging off
+		//click on admin at the top right corner
+			driver.findElement(By.xpath("//a[@href='#']")).click();
+		//click on log-off
+			driver.findElement(By.xpath("//a[@href='/demo/v9/index.php/login/logoff']")).click();
+			
+		Thread.sleep(3000);
+			//Close browser
+			driver.quit();
 		
 		 
 	 
