@@ -29,7 +29,8 @@ public class ExtractAllLinksFromWebpagedemo {
 		
 		//multiple web elements ie list of web elements in a bucket
 		List<WebElement> allLinks = driver.findElements(By.tagName("a"));// just contain the web elements
-		
+		int i = allLinks.size();
+		System.out.println("size of the list of all links is:" + i);
 		//extract it
 		//for each loop
 		for (WebElement webLink : allLinks) {
