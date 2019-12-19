@@ -1,4 +1,4 @@
-package com.CompName.SDET_Nov_2019;
+package Unused_com.CompName.SDET_Nov_2019;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -10,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import net.bytebuddy.utility.privilege.GetSystemPropertyAction;
 
 public class AutomationTalks_Asssignment2 {
 

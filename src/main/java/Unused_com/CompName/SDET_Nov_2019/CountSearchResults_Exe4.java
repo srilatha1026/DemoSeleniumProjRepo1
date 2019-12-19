@@ -1,8 +1,7 @@
-package com.CompName.SDET_Nov_2019;
+package Unused_com.CompName.SDET_Nov_2019;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -27,41 +26,34 @@ public class CountSearchResults_Exe4 {
 		//Search for text box and enter "site:automationtalks.com"
 		  WebElement searchBox = driver.findElement(By.xpath("//input[@name='q']"));
 		  searchBox.sendKeys("site:automationtalks.com");
+		  driver.findElement(By.xpath("//input[@id='gbqfbb']/preceding-sibling::input")).click();
 
-		  Robot rb = new Robot();
-		  rb.keyPress(KeyEvent.VK_ENTER);
-		  rb.keyRelease(KeyEvent.VK_ENTER);
 		  
 	   //Search result in page 1
 		 
-		  List<WebElement> allLinks = driver.findElements(By.xpath("//span[@class='S3Uucc']"));
+		  List<WebElement> allLinks = driver.findElements(By.xpath("//div[@id='search']//h3"));
 		  int size1= allLinks.size();
 		   
 		  for(WebElement searchLinks : allLinks) {
-			  System.out.println("Search Results in Page1 :" + searchLinks.getText());
+			  String linksText= searchLinks.getText();
+			  System.out.println("Search Results in Page1 :" + linksText);
 		  }
-		  System.out.println("No.of links in the Page1: "+  size1);
-	  //Click on next if it is enabled
+			  System.out.println("No.of links in the Page1: "+ size1 );
+			   
 		  
-		  WebElement nextButton = driver.findElement(By.xpath("//table[@id='nav']/tbody/tr[1]/td[12]/a[@id='pnnext']//span[text()='Next']"));
-		  nextButton.click();
-		 
-		  //Search result in page 2
-			  List<WebElement> allLinks1 = driver.findElements(By.xpath("//span[@class='S3Uucc']"));
-			  int size2= allLinks1.size();
+	  //Click on next if it is displayed
+		  
+		 Boolean nextButtonDisplayed = driver.findElement(By.xpath("//table[@id='nav']/tbody/tr[1]/td[12]/a[@id='pnnext']//span[text()='Next']")).isDisplayed();
+		  	 while(nextButtonDisplayed) {
+			  driver.findElement(By.xpath("//table[@id='nav']/tbody/tr[1]/td[12]/a[@id='pnnext']//span[text()='Next']")).click();
+			  List<WebElement> allLinks1 = driver.findElements(By.xpath("//div[@id='search']//h3"));	
+			  int size= allLinks1.size();
+			  
 			  for(WebElement searchLinks1 : allLinks1) {
-				  System.out.println("Search Results in Page2: " + searchLinks1.getText());
-				  
-			          }	 
-			  System.out.println("No.of links in the Page2: "+ size2); 
-		  //click on next button
-			  driver.findElement(By.xpath("//span[text()='Next']")).click();
-			  
-			  
-			  
-			  
-			  int totalSize = size1+size2;	
-			  System.out.println("Total no of search result is = " + totalSize);
+		  	    	System.out.println("Search Results in Page:"+ searchLinks1.getText());
+		  	    				  }
+			  System.out.println("No.of links in the Page: "+ size );
+		  	 }
 			  
 			  
 	}

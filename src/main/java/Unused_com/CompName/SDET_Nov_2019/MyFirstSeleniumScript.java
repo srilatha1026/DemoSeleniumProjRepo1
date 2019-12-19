@@ -1,4 +1,4 @@
-package com.CompName.SDET_Nov_2019;
+package Unused_com.CompName.SDET_Nov_2019;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
