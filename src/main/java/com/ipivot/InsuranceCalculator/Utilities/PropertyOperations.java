@@ -32,7 +32,7 @@ public class PropertyOperations {
 		
 		//get the data required using getProperty(Key) method which will give the value of the specified key from the config.properties file in the method()
 		//prop.getProperty("url");
-		//the key can be anything that we want to read. we wold be accessing it many time through getPropertyValueByKey() method. so do not hard core it as above:
+		//the key can be anything that we want to read. we would be accessing it many time through getPropertyValueByKey() method. so do not hard core it as above:
 		//instead do below: so we put getPropertyValueByKey(String key) while defining the method
 		String str = prop.getProperty(key);
 		if(str == null || str =="") {

@@ -48,13 +48,13 @@ public class CountSearchResults_Exe4 {
 			  driver.findElement(By.xpath("//table[@id='nav']/tbody/tr[1]/td[12]/a[@id='pnnext']//span[text()='Next']")).click();
 			  List<WebElement> allLinks1 = driver.findElements(By.xpath("//div[@id='search']//h3"));	
 			  int size= allLinks1.size();
-			  
 			  for(WebElement searchLinks1 : allLinks1) {
-		  	    	System.out.println("Search Results in Page:"+ searchLinks1.getText());
+		  	      System.out.println("Search Results in Page:"+ searchLinks1.getText());
 		  	    				  }
-			  System.out.println("No.of links in the Page: "+ size );
-		  	 }
+			      System.out.println("No.of links in the Page: "+ size );
 			  
+		  	 }
+		  	
 			  
 	}
 }

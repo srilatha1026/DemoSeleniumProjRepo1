@@ -32,7 +32,7 @@ import com.ipivot.InsuranceCalculator.PageObject.FillVehicleDataPage;
 import com.ipivot.InsuranceCalculator.TestBase.TestBaseClass;
 import com.ipivot.InsuranceCalculator.Utilities.excelRead;
 
-public class TestCase1 {
+public class TestCase2 {
 	
 	//WebDriver driver;//doesnt required to be written here as we are going to get it from TestBaseClass
 	TestBaseClass tb = new TestBaseClass();
@@ -43,6 +43,7 @@ public class TestCase1 {
 	FillInsurantDataPage insData;
 	FillProductDataPage prodData;
 	ChoosePriceOptionPage priceOption;
+	excelRead e = new excelRead();
 	@BeforeClass
 	//reports get initialised before any of the tests start to execute
 	public void reportSetup() {
@@ -69,58 +70,23 @@ public class TestCase1 {
 	  priceOption = new ChoosePriceOptionPage(driver);
 	}
 	
-	@Test(dataProvider = "insuranceCalcData")
-	public void Test1(Map mapData) {
-		logger = extent.createTest("Test1");//common line to write in every test case which should be sent to reports
-		//actual testcase gets executed
-//		System.out.println("Test is executed...");
-//		System.out.println(mapData);
-		//enter actual vehicle data
+	@Test
+	public void Test1() {
+		Map mapData = e.getMapDataFromRow(1);
 		vehData.FillActualVehicleData(mapData);
 		vehData.clickOnNextBtn();
-		
-		//enter insurant data
-		insData.fillActualInsurantData(mapData);
-		insData.clickOnNextButton();
-		
-		//enter product data
-		prodData.fillActualProductData(mapData);
-		prodData.clickOnNext();
-		
-		//verify priceOptions
-		priceOption.verifySilverPriceOption(mapData.get("PriceValidation_Silver").toString());
-		priceOption.verifyGoldPriceOption(mapData.get("PriceValidation_Gold").toString());
-		priceOption.verifyPlatinumPriceOption(mapData.get("PriceValidation_Platinum").toString());
-		priceOption.verifyUltimatePriceOption(mapData.get("PriceValidation_Ultimate").toString());
-		if(mapData.get("SelectOption").toString().equalsIgnoreCase("Silver")) {
-			priceOption.selectSilverPlan();
-		}
-		if(mapData.get("SelectOption").toString().equalsIgnoreCase("gold")) {
-			priceOption.selectGoldPlan();
-		}
-		if(mapData.get("SelectOption").toString().equalsIgnoreCase("platinum")) {
-			priceOption.selectPLatinumPlan();
-		}
-		if(mapData.get("SelectOption").toString().equalsIgnoreCase("ultimate")) {
-			priceOption.selectUtimatePlan();
-		}
-		priceOption.clickOnNextButton();
-		
 	}
-	
-	@DataProvider(name="insuranceCalcData")
-	public Object[][] dataProviderMethod() throws IOException {
-		excelRead e = new excelRead();
-		return e.ExcelDataInObjectArray();
-	}
-	
-	//@AfterMethod is invoked after testcase1 is executed
-	@Test(enabled = false)
+	@Test
 	public void Test2() {
-		logger = extent.createTest("Test2");
-		System.out.println("test case 2");
-		Assert.assertEquals("sss", "nnn");
+		vehData.FillActualVehicleData(mapData);
+		vehData.clickOnNextBtn();
 	}
+	@Test
+	public void Test3() {
+		vehData.FillActualVehicleData(mapData);
+		vehData.clickOnNextBtn();
+	}
+	
 	//@AfterMethod is invoked after testcase2 is executed
 	//so for every @test method is finished executing @Afetrmethod is invoked evrytime
 	@AfterMethod

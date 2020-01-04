@@ -1,52 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
+<testng-results skipped="0" failed="3" ignored="1" total="4" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21168" started-at="2019-12-18T22:17:17 EST" finished-at="2019-12-18T22:17:38 EST">
+  <suite name="Default suite" duration-ms="42570" started-at="2019-12-30T11:26:34 EST" finished-at="2019-12-30T11:27:16 EST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="21168" started-at="2019-12-18T22:17:17 EST" finished-at="2019-12-18T22:17:38 EST">
+    <test name="Default test" duration-ms="42570" started-at="2019-12-30T11:26:34 EST" finished-at="2019-12-30T11:27:16 EST">
       <class name="com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1">
-        <test-method status="PASS" signature="reportSetup()[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@3224f60b]" name="reportSetup" is-config="true" duration-ms="213" started-at="2019-12-18T22:17:17 EST" finished-at="2019-12-18T22:17:17 EST">
+        <test-method status="PASS" signature="reportSetup()[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@7d0587f1]" name="reportSetup" is-config="true" duration-ms="241" started-at="2019-12-30T11:26:34 EST" finished-at="2019-12-30T11:26:34 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- reportSetup -->
-        <test-method status="PASS" signature="TestSetUp()[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@3224f60b]" name="TestSetUp" is-config="true" duration-ms="11592" started-at="2019-12-18T22:17:17 EST" finished-at="2019-12-18T22:17:29 EST">
+        <test-method status="PASS" signature="TestSetUp()[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@7d0587f1]" name="TestSetUp" is-config="true" duration-ms="7415" started-at="2019-12-30T11:26:35 EST" finished-at="2019-12-30T11:26:42 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestSetUp -->
-        <test-method status="PASS" signature="Test1()[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@3224f60b]" name="Test1" duration-ms="11" started-at="2019-12-18T22:17:29 EST" finished-at="2019-12-18T22:17:29 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Test1 -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@3224f60b]" name="getResult" is-config="true" duration-ms="736" started-at="2019-12-18T22:17:29 EST" finished-at="2019-12-18T22:17:29 EST">
+        <test-method status="FAIL" signature="Test1(java.util.Map)[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@7d0587f1]" name="Test1" duration-ms="5087" started-at="2019-12-30T11:26:42 EST" data-provider="insuranceCalcData" finished-at="2019-12-30T11:26:47 EST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Test1 status=SUCCESS method=TestCase1.Test1()[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@3224f60b] output={null}]]]>
+                <![CDATA[{Vehicle_List Price=888, Product_startdate=02/02/2020, PriceValidation_Gold=238.00, TC No=1, Vehicle_Fuel Type=Gas, Vehicle_Annual Mileage=100, Product_insurancesum=3.000.000,00, Vehicle_Date of Manufacture=09/04/2019, Vehicle_PayLoad=888, Insurant_Hobby=speeding,Other, SelectOption=Silver, PriceValidation_Ultimate=2,621.00, PriceValidation_Silver=701.00, Vehicle_Make=Honda, Insurant_occupation=Farmer, Vehicle_Total Weight=888, Vehicle_No of Seats_motorcycle=2, Insurant_LastName=Simlat, Product_OptionalProducts=Euro Protection, Vehicle_Enging Performance=666, Insurant_ImageFilePath=??, Vehicle_No of Seats=7, Vehicle_Model=Motorcycle, Insurant_country=Canada, Vehicle_RightHandDrive=Yes, Insurant_zipcode=43768, Product_damageinsurance=Partial Coverage, TC Name=Verify Insurance Premium for Honda MotorCycle, Product_meritrating=Bonus 1, Vehicle_CylinderCapacity=333, PriceValidation_Platinum=1,376.00, Insurant_FirstName=Lats, Product_courtesycar=Yes, Insurant_birthdate=04/15/1984, Insurant_gender=Female}]]>
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="TestSetUp()[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@3224f60b]" name="TestSetUp" is-config="true" duration-ms="7241" started-at="2019-12-18T22:17:29 EST" finished-at="2019-12-18T22:17:37 EST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestSetUp -->
-        <test-method status="FAIL" signature="Test2()[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@3224f60b]" name="Test2" duration-ms="4" started-at="2019-12-18T22:17:37 EST" finished-at="2019-12-18T22:17:37 EST">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [nnn] but found [sss]]]>
+              <![CDATA[The price is not same expected [102.00] but found []]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [nnn] but found [sss]
+              <![CDATA[java.lang.AssertionError: The price is not same expected [102.00] but found []
 at org.testng.Assert.fail(Assert.java:97)
 at org.testng.Assert.assertEqualsImpl(Assert.java:136)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:575)
-at org.testng.Assert.assertEquals(Assert.java:585)
-at com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1.Test2(TestCase1.java:71)
+at com.ipivot.InsuranceCalculator.PageObject.ChoosePriceOptionPage.verifySilverPriceOption(ChoosePriceOptionPage.java:47)
+at com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1.Test1(TestCase1.java:91)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -80,19 +68,157 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test2 -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@3224f60b]" name="getResult" is-config="true" duration-ms="729" started-at="2019-12-18T22:17:37 EST" finished-at="2019-12-18T22:17:37 EST">
+        </test-method> <!-- Test1 -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@7d0587f1]" name="getResult" is-config="true" duration-ms="418" started-at="2019-12-30T11:26:47 EST" finished-at="2019-12-30T11:26:48 EST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Test2 status=FAILURE method=TestCase1.Test2()[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@3224f60b] output={null}]]]>
+                <![CDATA[[TestResult name=Test1 status=FAILURE method=TestCase1.Test1(java.util.Map)[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@7d0587f1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@3224f60b]" name="endReport" is-config="true" duration-ms="596" started-at="2019-12-18T22:17:37 EST" finished-at="2019-12-18T22:17:38 EST">
+        <test-method status="PASS" signature="TestSetUp()[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@7d0587f1]" name="TestSetUp" is-config="true" duration-ms="7901" started-at="2019-12-30T11:26:48 EST" finished-at="2019-12-30T11:26:56 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestSetUp -->
+        <test-method status="FAIL" signature="Test1(java.util.Map)[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@7d0587f1]" name="Test1" duration-ms="5937" started-at="2019-12-30T11:26:56 EST" data-provider="insuranceCalcData" finished-at="2019-12-30T11:27:02 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Vehicle_List Price=888, Product_startdate=02/02/2020, PriceValidation_Gold=238.00, TC No=2, Vehicle_Fuel Type=Other, Vehicle_Annual Mileage=100, Product_insurancesum=3.000.000,00, Vehicle_Date of Manufacture=09/04/2001, Vehicle_PayLoad=888, Insurant_Hobby=speeding,Other, SelectOption=Gold, PriceValidation_Ultimate=2,626.00, PriceValidation_Silver=702.00, Vehicle_Make=Volvo, Insurant_occupation=Farmer, Vehicle_Total Weight=888, Vehicle_No of Seats_motorcycle=2, Insurant_LastName=Simlat, Product_OptionalProducts=Euro Protection, Vehicle_Enging Performance=900, Insurant_ImageFilePath=??, Vehicle_No of Seats=7, Vehicle_Model=Scooter, Insurant_country=Sweden, Vehicle_RightHandDrive=No, Insurant_zipcode=444061, Product_damageinsurance=Partial Coverage, TC Name=Verify Insurance Premium for Volvo Scooter, Product_meritrating=Bonus 1, Vehicle_CylinderCapacity=900, PriceValidation_Platinum=1,379.00, Insurant_FirstName=Lats, Product_courtesycar=No, Insurant_birthdate=06/13/1980, Insurant_gender=Male}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The price is not same expected [102.00] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The price is not same expected [102.00] but found []
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at com.ipivot.InsuranceCalculator.PageObject.ChoosePriceOptionPage.verifySilverPriceOption(ChoosePriceOptionPage.java:47)
+at com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1.Test1(TestCase1.java:91)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test1 -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@7d0587f1]" name="getResult" is-config="true" duration-ms="416" started-at="2019-12-30T11:27:02 EST" finished-at="2019-12-30T11:27:02 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Test1 status=FAILURE method=TestCase1.Test1(java.util.Map)[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@7d0587f1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="TestSetUp()[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@7d0587f1]" name="TestSetUp" is-config="true" duration-ms="6904" started-at="2019-12-30T11:27:02 EST" finished-at="2019-12-30T11:27:09 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestSetUp -->
+        <test-method status="FAIL" signature="Test1(java.util.Map)[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@7d0587f1]" name="Test1" duration-ms="6184" started-at="2019-12-30T11:27:09 EST" data-provider="insuranceCalcData" finished-at="2019-12-30T11:27:15 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Vehicle_List Price=1000, Product_startdate=02/02/2020, PriceValidation_Gold=87.00, TC No=3, Vehicle_Fuel Type=Petrol, Vehicle_Annual Mileage=100, Product_insurancesum=3.000.000,00, Vehicle_Date of Manufacture=09/04/1989, Vehicle_PayLoad=100, Insurant_Hobby=speeding,Other, SelectOption=Gold, PriceValidation_Ultimate=967.00, PriceValidation_Silver=258.00, Vehicle_Make=Ford, Insurant_occupation=Farmer, Vehicle_Total Weight=100, Vehicle_No of Seats_motorcycle=2, Insurant_LastName=Simlat, Product_OptionalProducts=Euro Protection, Vehicle_Enging Performance=100, Insurant_ImageFilePath=??, Vehicle_No of Seats=4, Vehicle_Model=Moped, Insurant_country=Sweden, Vehicle_RightHandDrive=No, Insurant_zipcode=444061, Product_damageinsurance=Partial Coverage, TC Name=Verify Insurance Premium for Ford Moped, Product_meritrating=Bonus 1, Vehicle_CylinderCapacity=100, PriceValidation_Platinum=507.00, Insurant_FirstName=Lats, Product_courtesycar=No, Insurant_birthdate=08/17/1982, Insurant_gender=Female}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The price is not same expected [102.00] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The price is not same expected [102.00] but found []
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at com.ipivot.InsuranceCalculator.PageObject.ChoosePriceOptionPage.verifySilverPriceOption(ChoosePriceOptionPage.java:47)
+at com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1.Test1(TestCase1.java:91)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test1 -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@7d0587f1]" name="getResult" is-config="true" duration-ms="434" started-at="2019-12-30T11:27:15 EST" finished-at="2019-12-30T11:27:15 EST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Test1 status=FAILURE method=TestCase1.Test1(java.util.Map)[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@7d0587f1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1@7d0587f1]" name="endReport" is-config="true" duration-ms="745" started-at="2019-12-30T11:27:15 EST" finished-at="2019-12-30T11:27:16 EST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
