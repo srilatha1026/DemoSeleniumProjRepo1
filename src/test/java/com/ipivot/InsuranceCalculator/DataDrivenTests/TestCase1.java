@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -16,6 +17,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -32,6 +34,7 @@ import com.ipivot.InsuranceCalculator.PageObject.FillVehicleDataPage;
 import com.ipivot.InsuranceCalculator.TestBase.TestBaseClass;
 import com.ipivot.InsuranceCalculator.Utilities.excelRead;
 
+//@Listeners(com.ipivot.InsuranceCalculator.Utilities.ListenerClass.class) //this is one way of writing.the other method is to use it in testng_tes1.xml.
 public class TestCase1 {
 	
 	//WebDriver driver;//doesnt required to be written here as we are going to get it from TestBaseClass
@@ -43,6 +46,11 @@ public class TestCase1 {
 	FillInsurantDataPage insData;
 	FillProductDataPage prodData;
 	ChoosePriceOptionPage priceOption;
+	
+	//create logger class object
+	Logger log = Logger.getLogger(TestCase1.class.getName());
+	
+	
 	@BeforeClass
 	//reports get initialised before any of the tests start to execute
 	public void reportSetup() {
@@ -53,7 +61,7 @@ public class TestCase1 {
 		html.config().setDocumentTitle("Test Automation Report - Execution Report - Insurance Calculator Project");//report title is given
 		 html.config().setReportName("Test Automation Report - Execution Report - Insurance Calculator Project");//report name is given
 		 html.config().setTheme(Theme.DARK);//set the theme for the report
-		
+//		 log.info("Extent Report Setting is completed....");
 	}
 	
 	@BeforeMethod
@@ -69,8 +77,10 @@ public class TestCase1 {
 	  priceOption = new ChoosePriceOptionPage(driver);
 	}
 	
-	@Test(dataProvider = "insuranceCalcData")
+	@Test(dataProvider = "insuranceCalcData", enabled=false)
 	public void Test1(Map mapData) {
+		
+		log.info("Test case execution is started");
 		logger = extent.createTest("Test1");//common line to write in every test case which should be sent to reports
 		//actual testcase gets executed
 //		System.out.println("Test is executed...");
@@ -115,11 +125,14 @@ public class TestCase1 {
 	}
 	
 	//@AfterMethod is invoked after testcase1 is executed
-	@Test(enabled = false)
+	@Test(enabled = true)
 	public void Test2() {
+	//	log.info("Test Execution started");
 		logger = extent.createTest("Test2");
 		System.out.println("test case 2");
+	//	log.info("Test Execution Finished");
 		Assert.assertEquals("sss", "nnn");
+		
 	}
 	//@AfterMethod is invoked after testcase2 is executed
 	//so for every @test method is finished executing @Afetrmethod is invoked evrytime

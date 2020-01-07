@@ -7,9 +7,9 @@
         <methods>
           <include name="getResult"/>
           <include name="reportSetup"/>
-          <include name="Test1" invocation-numbers="0 1 2"/>
           <include name="TestSetUp"/>
           <include name="endReport"/>
+          <include name="Test2"/>
         </methods>
       </class> <!-- com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1 -->
     </classes>

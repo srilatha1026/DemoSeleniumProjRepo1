@@ -1,0 +1,14 @@
+2020-01-07 01:30:24,390 - com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1 -INFO - Extent Report Setting is completed....
+2020-01-07 01:30:24,404 - com.ipivot.InsuranceCalculator.TestBase.TestBaseClass -INFO - Browser selected for test execution ischrome
+2020-01-07 01:30:24,404 - com.ipivot.InsuranceCalculator.TestBase.TestBaseClass -INFO - URL used for test execution ishttp://demo.automationtalks.com/
+2020-01-07 01:30:30,596 - com.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1 -INFO - Test Execution started
+2020-01-07 02:09:28,532 - com.ipivot.InsuranceCalculator.TestBase.TestBaseClass -INFO - Browser selected for test execution ischrome
+2020-01-07 02:09:28,535 - com.ipivot.InsuranceCalculator.TestBase.TestBaseClass -INFO - URL used for test execution ishttp://demo.automationtalks.com/
+2020-01-07 02:12:33,734 - com.ipivot.InsuranceCalculator.TestBase.TestBaseClass -INFO - Browser selected for test execution ischrome
+2020-01-07 02:12:33,737 - com.ipivot.InsuranceCalculator.TestBase.TestBaseClass -INFO - URL used for test execution ishttp://demo.automationtalks.com/
+2020-01-07 02:18:03,273 - com.ipivot.InsuranceCalculator.TestBase.TestBaseClass -INFO - Browser selected for test execution ischrome
+2020-01-07 02:18:03,276 - com.ipivot.InsuranceCalculator.TestBase.TestBaseClass -INFO - URL used for test execution ishttp://demo.automationtalks.com/
+2020-01-07 02:18:10,649 - com.ipivot.InsuranceCalculator.Utilities.ListenerClass -INFO - Test execution is started for testCase
+2020-01-07 02:26:28,424 - com.ipivot.InsuranceCalculator.TestBase.TestBaseClass -INFO - Browser selected for test execution ischrome
+2020-01-07 02:26:28,427 - com.ipivot.InsuranceCalculator.TestBase.TestBaseClass -INFO - URL used for test execution ishttp://demo.automationtalks.com/
+2020-01-07 02:26:37,248 - com.ipivot.InsuranceCalculator.Utilities.ListenerClass -INFO - Test execution is started for testCasecom.ipivot.InsuranceCalculator.DataDrivenTests.TestCase1
