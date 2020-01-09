@@ -2,7 +2,7 @@ package com.ipivot.InsuranceCalculator.TestBase;
 
 import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -13,7 +13,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class TestBaseClass {
 	
 	//create logger class object
-	Logger log = Logger.getLogger(TestBaseClass.class.getName());
+//	Logger log = Logger.getLogger(TestBaseClass.class.getName());
 	
 	//in order to get the data from PropertyOperations class or to access/call the getPropertyValueByKey(String key)method in the PropertyOperations class so that we fetch requied data we create instance of the class
 	PropertyOperations propOps = new PropertyOperations();
@@ -30,10 +30,10 @@ public class TestBaseClass {
 	public WebDriver LaunchandNavigateBrowser() throws Exception {
 		String browser = propOps.getPropertyValueByKey("browser");
 		String url = propOps.getPropertyValueByKey("url");
-		log.info("Browser selected for test execution is"+browser);
-		log.info("URL used for test execution is"+url);
+//		log.info("Browser selected for test execution is"+browser);
+//		log.info("URL used for test execution is"+url);
 		if(browser == null || browser == "") {
-			log.fatal("Browser value is not specified...Terminating execution");
+//			log.fatal("Browser value is not specified...Terminating execution");
 			throw new Exception("Browser value not set in properties file");
 			
 		}
@@ -48,7 +48,7 @@ public class TestBaseClass {
 			WebDriverManager.iedriver().setup();
 			 driver = new InternetExplorerDriver();
 	}else {
-		log.error("Browser should be set to chrome,Firefox,or IE in properties File");
+//		log.error("Browser should be set to chrome,Firefox,or IE in properties File");
 		throw new Exception("Browser should be set to chrome,Firefox,or IE in properties File");
 	}
 		driver.navigate().to(url);

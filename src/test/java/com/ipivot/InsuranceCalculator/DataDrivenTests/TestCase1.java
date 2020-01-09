@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
+//import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -48,12 +48,12 @@ public class TestCase1 {
 	ChoosePriceOptionPage priceOption;
 	
 	//create logger class object
-	Logger log = Logger.getLogger(TestCase1.class.getName());
+//	Logger log = Logger.getLogger(TestCase1.class.getName());
 	
 	
 	@BeforeClass
 	//reports get initialised before any of the tests start to execute
-	public void reportSetup() {
+	public void reportSetUp() {
 		//set up details for extent reports==>//give config where the report needs to be stored
 		ExtentHtmlReporter html = new ExtentHtmlReporter(System.getProperty("user.dir") +"\\test-output\\ExtentReport.html");
 		extent = new ExtentReports();//this is the main class in which all the methods required for reporting is defined
@@ -80,7 +80,7 @@ public class TestCase1 {
 	@Test(dataProvider = "insuranceCalcData", enabled=false)
 	public void Test1(Map mapData) {
 		
-		log.info("Test case execution is started");
+//		log.info("Test case execution is started");
 		logger = extent.createTest("Test1");//common line to write in every test case which should be sent to reports
 		//actual testcase gets executed
 //		System.out.println("Test is executed...");
